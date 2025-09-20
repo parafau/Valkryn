@@ -50,11 +50,11 @@ while True:
     try:
         # Face detection
         face_locations = face_recognition.face_locations(rgb_small_frame)
-        # print(f"Found {len(face_locations)} faces") commented
+        print(f"Found {(face_locations)} faces") 
         
         if len(face_locations) > 0:
             face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)
-            # print(f"Generated {len(face_encodings)} encodings") commented
+            print(f"Generated {(face_encodings)} encodings")
             
             for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
                 matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
