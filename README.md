@@ -1,7 +1,7 @@
 # Valkryn
 A security camera system with sms/gmail alerting using facial recognition with OpenCV
 
-##Pre-requisites
+#Pre-requisites
 .Install "Visual Studio Code" 
 .Install "Visual Studio" to install the extension "Desktop Development with C++" (if you don't already have it)
 
