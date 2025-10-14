@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("test.html")  # matches your HTML filename
+    return render_template("Valkryn\template\base.html")  # matches your HTML filename
 
 @app.route("/api/hello")
 def hello():

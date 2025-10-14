@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Door Security — Frontend Prototype (Plain HTML/JS)</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header>
@@ -15,16 +15,13 @@
   <main>
     <section id="live-section">
       <div id="video-wrapper">
-        <!-- video element: can be webcam or stream URL -->
-        <video id="camera" autoplay playsinline muted></video>
-        <!-- overlay canvas sits on top of video -->
-        <canvas id="overlay"></canvas>
+        <img id="camera" src="{{ url_for('video_feed') }}" width="640" height="480">
       </div>
 
-      <div id="controls">
+      <!-- <div id="controls">
         <button id="startCamBtn">Start Camera</button>
         <button id="captureBtn">Capture Frame (manual)</button>
-      </div>
+      </div> -->
     </section>
 
     <section id="alerts">
@@ -47,7 +44,7 @@
     </section>
   </main>
 
-  <!-- Enrollment modal (very simple) -->
+  <!-- Enrollment modal (very simple)
   <div id="enrollModal" class="modal hidden">
     <div class="modal-content">
       <h3>Enroll Person</h3>
@@ -61,6 +58,6 @@
         <button id="enrollCancelBtn">Cancel</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <footer>
