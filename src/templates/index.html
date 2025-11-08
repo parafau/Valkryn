@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Door Security — Frontend Prototype (Plain HTML/JS)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Door Security — Frontend Prototype</h1>
+  </header>
+
+  <main>
+    <section id="live-section">
+      <div id="video-wrapper">
+        <img id="camera" src="{{ url_for('video_feed') }}" width="640" height="480">
+      </div>
+
+      <!-- <div id="controls">
+        <button id="startCamBtn">Start Camera</button>
+        <button id="captureBtn">Capture Frame (manual)</button>
+      </div> -->
+    </section>
+
+    <section id="alerts">
+      <!-- transient alert toast -->
+      <div id="toast" class="hidden">
+        <img id="toast-thumb" alt="thumb"/>
+        <div>
+          <div id="toast-text"></div>
+          <div class="toast-actions">
+            <button id="markSafeBtn">Mark Safe</button>
+            <button id="ignoreBtn">Ignore</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events-section">
+      <h2>Event History</h2>
+      <ul id="events"></ul>
+    </section>
+  </main>
+
+  <!-- Enrollment modal (very simple)
+  <div id="enrollModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Enroll Person</h3>
+      <img id="enroll-thumb" alt="thumb" />
+      <label>
+        Name:
+        <input id="enroll-name" type="text" placeholder="Full name">
+      </label>
+      <div class="modal-actions">
+        <button id="enrollSaveBtn">Save</button>
+        <button id="enrollCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div> -->
+
+  <footer>

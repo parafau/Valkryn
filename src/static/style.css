@@ -1,0 +1,51 @@
+:root{
+  --bg:#061f46;
+  --card:#0b1220;
+  --accent:#2dd4bf;
+  --muted:#94a3b8;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;
+  background:linear-gradient(180deg,var(--bg),#071022);
+  color:#e6eef6;
+  padding:16px;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+h1{font-size:18px;margin:0}
+main{display:grid;grid-template-columns:1fr 340px;gap:12px;align-items:start}
+#live-section{background:var(--card);padding:12px;border-radius:8px}
+#video-wrapper {
+    width: auto;
+    height: auto;
+    display: inline-block; /* shrinkwraps the video */
+}
+#video-wrapper img {
+    display: block;
+}
+video{width:100%;height:100%;object-fit:cover;display:block}
+canvas{position:absolute;left:0;top:0;pointer-events:none}
+#controls{margin-top:8px;display:flex;gap:8px}
+button{background:var(--accent);border:none;padding:8px 10px;border-radius:6px;color:#012;cursor:pointer}
+button.secondary{background:transparent;border:1px solid #233; color:var(--muted)}
+#alerts{margin-top:8px}
+#toast{display:flex;gap:8px;align-items:center;background:#071326;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+#toast img{width:72px;height:54px;object-fit:cover;border-radius:4px}
+.hidden{display:none}
+#events-section{background:var(--card);padding:12px;border-radius:8px;overflow:auto;max-height:560px}
+#events{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.event{display:flex;gap:10px;align-items:center;background:#071326;padding:8px;border-radius:6px}
+.event img{width:68px;height:50px;object-fit:cover;border-radius:4px}
+.event .meta{display:flex;flex-direction:column}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center}
+.modal-content{background:#07202c;padding:14px;border-radius:8px;width:320px}
+.modal img{width:100%;height:140px;object-fit:cover;border-radius:4px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+footer{margin-top:12px;opacity:0.7}
